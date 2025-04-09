@@ -7,5 +7,7 @@ public class Main {
                 "Kirill",
                 40_000
         );
+        System.out.println("Информация о первом сотруднике: " + firstEmployee +
+                "\nЗарплата равна: " + firstEmployee.getMonthSalary());
     }
 }
