@@ -23,6 +23,8 @@ public abstract class Employee {
         return fixedSalary;
     }
 
+    public abstract double getMonthSalary();
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -32,5 +34,4 @@ public abstract class Employee {
                 '}';
     }
 
-    public abstract double getMonthSalary();
 }
