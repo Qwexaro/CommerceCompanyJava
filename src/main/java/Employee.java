@@ -31,4 +31,6 @@ public abstract class Employee {
                 ", fixedSalary=" + fixedSalary +
                 '}';
     }
+
+    public abstract double getMonthSalary();
 }
