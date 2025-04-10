@@ -16,4 +16,16 @@ public class Company {
     public double getIncomeCompany() {
         return incomeCompany;
     }
+
+    public void hire(Employee employee) {
+        employees.add(employee);
+    }
+
+    public void hireAll(Collection<Employee> employees) {
+        this.employees.addAll(employees);
+    }
+
+    public void fire(Employee employee){
+        employees.remove(employee);
+    }
 }
