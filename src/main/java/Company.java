@@ -30,14 +30,17 @@ public class Company {
     }
 
     public void sortedSalariesEmployees() {
-        for (int i = 0; i < salariesEmployees.size() - 1; i++) {
-            for (int j = salariesEmployees.size() - 1; j >= i + 1; j--) {
+        int i = 0;
+        int j = salariesEmployees.size() - 1;
+        for (; i < salariesEmployees.size() - 2; i++) {
+            for (; j >= (i + 1); j--) {
                 double tmp = salariesEmployees.get(i);
-                if (salariesEmployees.get(i) < salariesEmployees.get(j)) {
+                if (salariesEmployees.get(i).compareTo(salariesEmployees.get(j)) > 0) {
                     salariesEmployees.set(i, salariesEmployees.get(j));
                     salariesEmployees.set(j, tmp);
                 }
             }
+            j = salariesEmployees.size() - 1;
         }
     }
 }
