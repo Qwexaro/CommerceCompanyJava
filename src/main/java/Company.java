@@ -25,7 +25,19 @@ public class Company {
         this.employees.addAll(employees);
     }
 
-    public void fire(Employee employee){
+    public void fire(Employee employee) {
         employees.remove(employee);
+    }
+
+    public void sortedSalariesEmployees() {
+        for (int i = 0; i < salariesEmployees.size() - 1; i++) {
+            for (int j = salariesEmployees.size() - 1; j >= i + 1; j--) {
+                double tmp = salariesEmployees.get(i);
+                if (salariesEmployees.get(i) < salariesEmployees.get(j)) {
+                    salariesEmployees.set(i, salariesEmployees.get(j));
+                    salariesEmployees.set(j, tmp);
+                }
+            }
+        }
     }
 }
